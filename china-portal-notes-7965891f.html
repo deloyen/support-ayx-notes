@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>买球站 · 稳定入口与使用说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f7fa;
+      color: #1e2025;
+    }
+
+    /* 深色头图 – 简洁博客式 */
+    .hero {
+      background: linear-gradient(145deg, #0b1729 0%, #1a2f44 100%);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      color: #eaeef2;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+      color: #f0f4f8;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      max-width: 640px;
+      margin: 0 auto 1.2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 0.75rem;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.85rem;
+      color: #cfdbe6;
+    }
+
+    /* 正文区 – 浅色卡片感 */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .post {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem 2.2rem;
+      box-shadow: 0 8px 28px -8px rgba(0, 0, 0, 0.06);
+    }
+
+    .post h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 2rem 0 0.8rem;
+      color: #132433;
+      border-left: 4px solid #306c9f;
+      padding-left: 1rem;
+    }
+
+    .post h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .post p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2c3a48;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #256a9e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #256a9e;
+    }
+
+    /* 引用提示块 */
+    .note {
+      background: #f0f4fa;
+      border-left: 5px solid #306c9f;
+      padding: 1.4rem 1.6rem;
+      border-radius: 0 16px 16px 0;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+      color: #1e3348;
+    }
+
+    .note strong {
+      color: #1a4d74;
+    }
+
+    .quote-line {
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+      font-style: italic;
+      background: #fafcfd;
+      padding: 1rem 1.4rem;
+      border-radius: 14px;
+      border: 1px solid #e2eaf1;
+      margin: 1.8rem 0;
+    }
+
+    .quote-line::before {
+      content: "📌";
+      font-style: normal;
+      font-size: 1.2rem;
+    }
+
+    /* 特点小清单 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .feature-item {
+      background: #f8fafc;
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid #dfe7ef;
+      font-size: 0.95rem;
+    }
+
+    .feature-item strong {
+      display: block;
+      color: #1a4d74;
+      margin-bottom: 0.25rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin-top: 2.2rem;
+      border-top: 1px solid #dfe7ef;
+      padding-top: 1.8rem;
+    }
+
+    .faq-summary dt {
+      font-weight: 600;
+      margin: 0.8rem 0 0.3rem;
+      color: #1a2f44;
+    }
+
+    .faq-summary dd {
+      margin-left: 0;
+      margin-bottom: 0.8rem;
+      padding-left: 0.8rem;
+      border-left: 2px solid #bcccdc;
+      color: #2f4256;
+    }
+
+    /* 访问句 底部 */
+    .access-sentence {
+      background: #edf3f9;
+      border-radius: 24px;
+      padding: 1.4rem 2rem;
+      margin: 2rem 0 1rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .access-sentence a {
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #d9e2ec;
+      margin: 1.8rem 0;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .post { padding: 1.5rem; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .container { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>买球站 · 说明笔记</h1>
+  <p class="sub">从稳定入口开始，清楚了解页面结构与访问习惯</p>
+  <span class="badge">持续维护 · 信息整理</span>
+</header>
+
+<main class="container">
+  <article class="post">
+
+    <h2>关于这个入口</h2>
+    <p>
+      不少朋友在寻找持续可用的访问方式时，更在意的是页面是否清晰、引导是否直接。<strong>买球站</strong> 作为一类内容的集中页面，其核心价值在于提供稳定的访问路径和一致的使用体验。这篇笔记从入口逻辑和页面功能的角度做一次整理，方便新老朋友快速建立认知。
+    </p>
+
+    <h2>页面结构与常见模块</h2>
+    <p>
+      典型的说明页通常包含几个固定区域：顶部标识与导航提示、内容分区（介绍、特点、注意事项）、以及指向主站的链接句。这种布局的好处是——无论用手机还是电脑打开，都能在几秒内定位到自己关心的部分。如果你之前用过类似的聚合页，会发现这里的层次更偏向“先说明，再跳转”的节奏。
+    </p>
+
+    <div class="note">
+      <strong>引用提示：</strong> 在尝试任何操作之前，建议先完整浏览页面的说明文字和 FAQ 摘要。许多常见问题都可以在下方找到概括性回答，不必反复跳转。
+    </div>
+
+    <h2>几个值得留意的特点</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>结构统一</strong>
+        每次访问看到的版式基本一致，便于形成使用习惯
+      </div>
+      <div class="feature-item">
+        <strong>链接清晰</strong>
+        主要跳转位置固定，不会频繁变更文字或样式
+      </div>
+      <div class="feature-item">
+        <strong>说明优先</strong>
+        页面先提供背景和提示，再给出操作引导
+      </div>
+      <div class="feature-item">
+        <strong>响应适配</strong>
+        移动设备阅读同样友好，不需要横向缩放
+      </div>
+    </div>
+
+    <h2>使用场景举例</h2>
+    <p>
+      假设你在一台新设备上想要了解相关资源，首先打开的就是这样一页说明。你可以快速浏览标题和加粗部分，判断是否匹配自己的需求。如果确认，就可以从句子中找到指向主站的链接。比如下面这句：日常使用中，我们更推荐通过 <a href="https://china-portal-maiqiu.com">买球站</a> 获取持续更新的入口信息，页面维护频率和内容准确度都比较可靠。
+    </p>
+
+    <div class="quote-line">
+      一个稳定的入口，往往比频繁寻找新地址更节省时间。
+    </div>
+
+    <h2>FAQ 摘要</h2>
+    <dl class="faq-summary">
+      <dt>页面信息多久更新一次？</dt>
+      <dd>通常跟随站点变化做同步调整，没有固定周期，但会尽量保持说明与实际一致。</dd>
+
+      <dt>为什么强调“先看说明再跳转”？</dt>
+      <dd>因为部分操作或环境要求会在说明里提前标注，直接跳转可能遗漏上下文。</dd>
+
+      <dt>移动端和桌面端体验有区别吗？</dt>
+      <dd>布局上做了响应适配，主要区别是字体大小和卡片间距，核心内容完全一致。</dd>
+
+      <dt>链接文字会不会突然变化？</dt>
+      <dd>为了便于识别，指向主站的链接会长期使用固定名称，不会随意替换成其他词汇。</dd>
+    </dl>
+
+    <hr>
+
+    <div class="access-sentence">
+      如果你已经阅读了以上说明，并且希望直接访问主站，可以使用 <a href="https://china-portal-maiqiu.com">买球站</a> 这个链接，它指向当前维护中的稳定页面。
+    </div>
+
+    <p style="margin-top: 1.2rem; font-size: 0.9rem; color: #607586;">
+      本文档仅作为使用参考，不包含任何形式的操作承诺或诱导表述。请根据实际需要自行判断。
+    </p>
+
+  </article>
+</main>
+
+</body>
+</html>
